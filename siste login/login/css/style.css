@@ -1,0 +1,228 @@
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
+    /* display: flex deixa a div uma do lado da outra,m indo pra esquerda da div.
+
+justify-content: center centraliza, usado na div pai, centraliza os itens ou divs.
+
+align_item centraliza os intems, mas so se tiver tamnanho definido.
+
+
+heigth: 100%vh, altura, vh = viewhport
+
+position posiciona os elementos especfiica, relative e relativo aos elementos, toma como base ela mesma
+absoluteela se sobrepoem 
+
+*/
+    /* resetando o css para os navegadores */
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: 0;
+    }
+    
+    body {
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: rgb(217, 248, 248);
+    }
+    
+    .content {
+        background-color: hsla(0, 0%, 100%, 0.979);
+        border-radius: 15px;
+        width: 960px;
+        height: 50%;
+        display: flex;
+        /* nao preciso usar esse atributo por usar o justify sapce-between e o align */
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    
+    .content::before {
+        content: "";
+        position: absolute;
+        background-color: blueviolet;
+        width: 40%;
+        height: 100%;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        ;
+        ;
+        left: 60%;
+    }
+    
+    .title {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        text-transform: capitalize;
+    }
+    
+    .title-bemvindo {
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        font-weight: 300;
+    }
+    
+    .title-second {
+        color: rgb(66, 179, 179);
+    }
+    
+    .description {
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 30px;
+    }
+    
+    .description-primary {
+        color: white
+    }
+    
+    .description-second {
+        color: rgb(126, 126, 126);
+    }
+    
+    .btn {
+        border-radius: 15px;
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+        padding: 10px 50px;
+        font-size: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        width: 150px;
+        align-self: center;
+        border: none;
+        margin: 1rem 0;
+    }
+    
+    .btn-primary {
+        border: 1px solid #fff;
+        background-color: transparent;
+    }
+    
+    .btn-primary:hover {
+        background-color: rgb(255, 255, 255);
+        color: blueviolet;
+    }
+    
+    .btn-second {
+        background-color: blueviolet;
+        color: 1px solid blueviolet;
+    }
+    
+    .btn-second:hover {
+        background-color: rgb(255, 255, 255);
+        border: 1px solid blueviolet;
+        color: blueviolet;
+    }
+    
+    .first-content {
+        display: flex;
+        display: none;
+    }
+    
+    .first-column {
+        text-align: center;
+        flex: 1 0 auto;
+        z-index: 10;
+    }
+    
+    .social-midia {
+        margin: 1rem 0;
+    }
+    
+    .link-social-midia:hover {
+        background-color: blueviolet;
+        color: #fff;
+        border-color: blueviolet;
+    }
+    
+    .second-column {
+        flex: 2 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .item-social-midia {
+        margin: 1rem 0;
+    }
+    /* colocando os itens da div uma do lado da outra*/
+    
+    .list-social-midia {
+        display: flex;
+        list-style: none;
+    }
+    
+    .item-social-midia {
+        border: 1px solid;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        color: black;
+    }
+    
+    .link-social-midia:not(:first-child) {
+        margin-left: 10px;
+    }
+    
+    .forms {
+        display: flex;
+        /*direcionando a direcao do fluxo*/
+        flex-direction: column;
+        width: 55%;
+    }
+    
+    .forms input {
+        height: 45px;
+        border: none;
+        width: 100%;
+        background-color: rgb(167, 167, 43);
+        text-align: center;
+    }
+    
+    .label-input {
+        background-color: bisque;
+        display: flex;
+        align-items: center;
+        margin: 8px;
+    }
+    
+    .icon-modify {
+        color: #000000;
+        padding: 0 5px;
+    }
+    
+    .second-content {
+        position: absolute;
+        display: flex;
+        /*escondendo os elementos*/
+    }
+    
+    .second-content .first-column {
+        order: 2;
+    }
+    
+    .second-content .second.column {
+        order: 1;
+    }
+    
+    .password {
+        color: blue;
+        font-size: 14px;
+        margin: 15px 0;
+    }
+    
+    .password::first-letter {
+        text-transform: capitalize;
+    }
