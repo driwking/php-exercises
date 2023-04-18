@@ -34,34 +34,34 @@
 
 // verificando erros
     if(!$idade = filter_input(INPUT_POST,'idade', FILTER_VALIDATE_INT)): // filtert_input serve para ferificar se um evento e verdadeiro, nesse caso verifica se o valor recebido pelo input idade e inteiro, e executa no if caso seja
-    // no filter_input, primeiro e tipo de input a ser verificado, depois o campo, e por ultimo a condicao
+    // no filter_input, primeiro e o tipo de input a ser verificado, depois o campo, e por ultimo a condicao
         $erros[] = "idade precisa ser um inteiro";
         // print_r($erros);
     endif;
 
 
-    if(!$email = filter_input(INPUT_POST,'email', FILTER_VALIDATE_EMAIL)): // filtert_input serve para ferificar se um evento e verdadeiro, nesse caso verifica se o valor recebido pelo input idade e inteiro, e executa no if caso seja
-        // no filter_input, primeiro e tipo de input a ser verificado, depois o campo, e por ultimo a condicao
+    if(!$email = filter_input(INPUT_POST,'email', FILTER_VALIDATE_EMAIL)): // filtert_input serve para ferificar se um evento e verdadeiro, nesse caso verifica se o valor recebido pelo input email e um email, e executa no if caso seja
+        // no filter_input, primeiro e o tipo de input a ser verificado, depois o campo, e por ultimo a condicao
         $erros[] = "email invalido";
             // print_r($erros);
         endif;
 
-    if(!$peso = filter_input(INPUT_POST,'peso', FILTER_VALIDATE_FLOAT)): // filtert_input serve para ferificar se um evento e verdadeiro, nesse caso verifica se o valor recebido pelo input idade e inteiro, e executa no if caso seja
-    // no filter_input, primeiro e tipo de input a ser verificado, depois o campo, e por ultimo a condicao
+    if(!$peso = filter_input(INPUT_POST,'peso', FILTER_VALIDATE_FLOAT)): // filtert_input serve para ferificar se um evento e verdadeiro, nesse caso verifica se o valor recebido pelo input peso e um float, e executa no if caso seja
+    // no filter_input, primeiro e o tipo de input a ser verificado, depois o campo, e por ultimo a condicao
         $erros[] = "peso errado, colocar com ponto";
         // print_r($erros);
     endif;
 
     
-    if(!$ip = filter_input(INPUT_POST,'ip', FILTER_VALIDATE_IP)): // filtert_input serve para ferificar se um evento e verdadeiro, nesse caso verifica se o valor recebido pelo input idade e inteiro, e executa no if caso seja
-        // no filter_input, primeiro e tipo de input a ser verificado, depois o campo, e por ultimo a condicao
+    if(!$ip = filter_input(INPUT_POST,'ip', FILTER_VALIDATE_IP)): // filtert_input serve para ferificar se um evento e verdadeiro, nesse caso verifica se o valor recebido pelo input ip e um ip, e executa no if caso seja
+        // no filter_input, primeiro e o tipo de input a ser verificado, depois o campo, e por ultimo a condicao
         $erros[] = "ip invalido";
             // print_r($erros);
     endif;
     
     
-    if(!$url = filter_input(INPUT_POST,'url', FILTER_VALIDATE_URL)): // filtert_input serve para ferificar se um evento e verdadeiro, nesse caso verifica se o valor recebido pelo input idade e inteiro, e executa no if caso seja
-        // no filter_input, primeiro e tipo de input a ser verificado, depois o campo, e por ultimo a condicao
+    if(!$url = filter_input(INPUT_POST,'url', FILTER_VALIDATE_URL)): // filtert_input serve para ferificar se um evento e verdadeiro, nesse caso verifica se o valor recebido pelo input url e uma url, e executa no if caso seja
+        // no filter_input, primeiro e o tipo de input a ser verificado, depois o campo, e por ultimo a condicao
         $erros[] = "URL incorreta";
             // print_r($erros);
     endif;

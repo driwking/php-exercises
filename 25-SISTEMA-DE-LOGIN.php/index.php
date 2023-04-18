@@ -11,8 +11,8 @@ session_start(); // iniciando uma sessao
  if(isset($_POST['login']) && isset($_POST['senha'])):
 
     $erros = array();
-    $login = mysqli_escape_string($connect, $_POST['login']); //filtrando dados pela funcao myqli_escpe_string a  // primeiro parametro
-    $senha = mysqli_escape_string($connect, $_POST['senha']); // filtrando a senha
+    $login = mysqli_escape_string($connect, $_POST['login']); //filtrando dados pela funcao myqli_escpe_string a  // primeiro parametro conxao com o banco de dados. // segundo parametro a variavel que esta na super global post 
+    $senha = mysqli_escape_string($connect, $_POST['senha']); // filtrando a senha // conectando com o banco de dados, // a senha da super global post enviada pelo usuario
     
     if(empty($login) or empty($senha)): // verifica se  os campos estao vazios
         $erros[] = "<li> O  campo login/senha precisa ser preenchido </li>";
@@ -23,7 +23,7 @@ session_start(); // iniciando uma sessao
 
         if(mysqli_num_rows($resultado) > 0): 
             
-            $senha = md5($senha);
+            $senha = md5($senha); // criptografica a senha no tamanho definido no banco de dados, e para enviar a senha ela precisar estar criptografada para ser interpretada pelo DB.
             $sql = "SELECT * FROM usuarios WHERE login = '$login' AND senha = '$senha'";
             $resultado = mysqli_query($connect, $sql);
 

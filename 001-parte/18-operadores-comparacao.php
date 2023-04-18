@@ -6,7 +6,7 @@
     != diferente
     ==== o mesmo que
     !== nao identico
-    <> <> diferente
+    <> diferente
     < menor que
     > maior que
     <= menor igual

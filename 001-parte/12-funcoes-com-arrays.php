@@ -53,16 +53,16 @@ print_r($novaData);
 
 echo "<hr>";
 $frase = "testando o explode";
-$lista = explode(" ", $frase);
+$lista = explode(" ",$frase);
 print_r($lista);
 
 
 
-// implode // no sepador ele adiciona o que eu colocar, espaço, virgula o que for
+// implode // no separador ele adiciona o que eu colocar, espaço, virgula o que for
 
 echo "<hr>";
 
-$caracter = implode(', ' ,$values); // transforma em string o array, se ele nao estiver combinado junto de outro array antes da execusao desse codigo, dara certo, caso contrario nao
+$caracter = implode(', ' ,$values); // transforma em string o array. Se ele nao estiver combinado junto de outro array antes da execusao desse codigo, dara certo, caso contrario nao
 echo $caracter;
 
 

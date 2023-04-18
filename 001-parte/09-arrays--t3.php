@@ -37,7 +37,7 @@ echo "<hr>";
 
 foreach($times as $indice =>$valor){ // o indice recebe os indice por conta de ser atribuido os valores a var $valor
 
-    foreach($times[$indice] as $indice2 =>$valor2){ // o time recebe o indice e o @indice2 e o novo indice dentro do array e o $valor2 o valor dos array dentro do array
+    foreach($times[$indice] as $indice2 =>$valor2){ // o time recebe o indice e o $indice2 e o novo indice dentro do array e o $valor2 o valor dos array dentro do array
         echo $indice2.':'.$valor2."<br>"; // printa o indice e o valor
 
     };

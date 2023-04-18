@@ -10,7 +10,7 @@
 
 
 $db = 1234.56;
-$preco = number_format($db, 2, ",","."); // formatan os numeris, primeiro e o valor ou a var, depois a quantidade de casas decimais,
+$preco = number_format($db, 2, ",","."); // formata os numeros, primeiro e o valor ou a var, depois a quantidade de casas decimais,
 
 echo " o valor do preço e  R$:$preco";
 echo "<hr>";
