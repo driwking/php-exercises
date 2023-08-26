@@ -2,9 +2,9 @@
 // Conexao com o banco de dados
 $servername = "localhost";
 $username = "root";
-$password = "";
-$db_name = "sistemalogin";
-$porta = "3308";
+$password = '';
+$db_name = "test_db";
+$porta = "3306";
 $connect = mysqli_connect($servername, $username, $password, $db_name, $porta); // faz conexao com o banco de dados
 //mysqli - tem suporte para programacao procedural e POO - evoluçao do mysqlquery, obsoleto
 
